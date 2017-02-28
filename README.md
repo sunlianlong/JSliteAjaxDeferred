@@ -24,7 +24,7 @@ $("#app").on("click","li",function(){
 ```
 ## 修改2：
 
-对比zepto的ajax()方法修改了JSLite方法,使其可以捕捉到请求的错误,并将zepto的callbacks模块和Deferred模块拿来进行简单修改,使ajax()支持链式回调,方法与zepto相同
+对比zepto的ajax()方法修改了JSLite方法,使其可以捕捉到请求的错误,并去除其他方法只留$.ajax()方法,不能使用jsonp跨域,并将zepto的callbacks模块和Deferred模块拿来进行简单修改,使ajax()支持链式回调,方法与zepto相同
 
 ```
 function getMessages(url){
