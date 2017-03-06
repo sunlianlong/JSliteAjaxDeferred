@@ -981,8 +981,8 @@ window.JSLite = window.$ = JSLite;
       }
     /* 绑定事件 end */
 })(JSLite);
-return JSLite;
-}));
+
+
 
 /*
 *来源于zepto,并对代码进行了修改，去掉了实际项目中不用的jsonp代码以及简化函数，只保留$.ajax()方法
@@ -1455,3 +1455,7 @@ return JSLite;
   }
   $.Deferred = Deferred
 })(JSLite)
+
+
+return JSLite;
+}));
