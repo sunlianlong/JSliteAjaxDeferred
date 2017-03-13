@@ -599,10 +599,17 @@ JSLite.fn.extend({
         return this.each(function(){ for(var a in css) this.style[a] = css[a];});
     },
     hasClass:function(name){
-        if (!name) return false
-        return emptyArray.some.call(this, function(el){
-            return (' ' + el.className + ' ').indexOf(this) > -1
-        }, ' ' + name + ' ');
+        // if (!name) return false;
+        // return emptyArray.some.call(this, function(el){
+        //     return (' ' + el.className + ' ').indexOf(this) > -1
+        // }, ' ' + name + ' ');
+        var className = " " + name + " ",i = 0,l = this.length;
+        for ( ; i < l; i++ ) {
+            if ( this[i].nodeType === 1 && (" " + this[i].className + " ").indexOf( className ) > -1 ) {
+                return true;
+            }
+        }
+        return false;
     },
     addClass:function(name){
         if (!name) return this;
